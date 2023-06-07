@@ -5,3 +5,6 @@ work.dev.i@yandex.ru
 
 admin
 40OCe7sOkr36jPCgxftI
+
+
+categories['thumb']

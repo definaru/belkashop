@@ -24,7 +24,7 @@ final class Twig {
 			'autoescape'  => false,
 			'debug'       => false,
 			'auto_reload' => true,
-			'cache'       => DIR_CACHE . 'template/'
+			//'cache'       => DIR_CACHE . 'template/'
 		);
 
 		try {

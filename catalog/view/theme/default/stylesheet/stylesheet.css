@@ -14,6 +14,16 @@ h1, h2, h3, h4, h5, h6 {
 .fa {
 	font-size: 14px;
 }
+.fixed {
+	position: fixed;
+    width: 100%;
+    top: 0px;
+    z-index: 100;
+    padding-top: 13px;
+    background: linear-gradient(276deg, rgba(74,17,116,1) 35%, rgba(202,17,170,1) 100%);
+}
+.table {color: #000;}
+
 /* Override the bootstrap defaults */
 h1 {
 	font-size: 33px;
@@ -77,12 +87,14 @@ div.required .control-label:before {
 }
 .btn {box-shadow: none !important}
 
+#header .table>tbody>tr>td {border: 0}
+#header .table-bordered {border: 0}
 #product-product {padding-bottom: 100px;}
 
 /* top */
 #top {
 	padding: 4px 0px 3px 0;
-	margin: 0 0 20px 0;
+	margin: 0;
 	min-height: 40px;
 }
 #top .container {
@@ -214,11 +226,15 @@ div.required .control-label:before {
 }
 #menu .nav > li > a {
 	color: #000;
-	padding: 10px;
+	padding: 6px 13px;
+	width: 100%;
 	background-color: transparent;
+	text-transform: capitalize;
 }
 #menu .nav > li > a:hover, #menu .nav > li.open > a {
-	background-color: rgb(0 0 0 / 4%);
+	background-color: #cb11ab;
+    color: #fff;
+	border-radius: 8px;
 }
 #menu .dropdown-menu {
 	padding-bottom: 0;
@@ -327,6 +343,7 @@ footer {
     background-color: #4a1174;
     border-top: 1px solid #ddd;
     color: #e2e2e2;
+	margin-top: 100px;
 }
 footer hr {
 	border-top: none;
@@ -377,7 +394,6 @@ footer ul li {
 .bg-belka {
     color: #fff;
     margin-bottom: 40px;
-	padding: 15px 0;
     background: linear-gradient(276deg, rgba(74,17,116,1) 35%, rgba(202,17,170,1) 100%);
 }
 /* .nav>li {
@@ -397,40 +413,76 @@ footer ul li {
 
 /* The side navigation menu */
 .sidenav {
-	height: 100%;
-	width: 0;
-	position: fixed;
-	z-index: 1;
-	top: 0;
-	left: 0;
-	background-color: #f5f5f5;
-	overflow-x: hidden;
-	padding-top: 30px;
-	transition: 0.5s;
-  }
-  
+    height: 100%;
+    width: 0;
+    top: 0;
+    left: 0;
+    background-color: #fff;
+    position: fixed;
+    z-index: 999;
+    overflow-x: hidden;
+    transition: .5s;
+    padding-top: 35px;
+	box-shadow: 0px 1px 220px #000;
+}
 .sidenav a {
 	padding: 8px 8px 8px 32px;
 	text-decoration: none;
-	font-size: 15px;
-	color: #222;
+	font-size: 14px;
+	color: #111;
 	display: block;
 	transition: 0.3s;
 }
-.sidenav a:hover {color: #111}
+.sidenav a:hover {color: #000} 
 .sidenav .closebtn {
-	position: absolute;
-	top: 0;
-	right: 0;
-	font-size: 36px;
-	margin-left: 50px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 30px;
 }
+.sidenav::-webkit-scrollbar{    width:5px;}
+.sidenav::-webkit-scrollbar-thumb{    
+    border-width:1px 1px 1px 2px;    
+    border-color: #777;    
+    background-color: #999;    
+    margin-left: -5px;
+}
+.sidenav::-webkit-scrollbar-thumb:hover{    
+    border-width: 1px 1px 1px 2px;    
+    border-color: #555;    
+    background-color: #777;
+}
+.sidenav::-webkit-scrollbar-track{    
+    border-width:0;
+}
+.sidenav::-webkit-scrollbar-track:hover{    
+    border-left: solid 1px #aaa;    
+    background-color: #eee;
+}
+.wrapper {padding: 0 5px;}
+.wrapper .navbar-collapse {padding: 0;}
+.wrapper div ul li {
+    display: flex;
+    width: 100%;
+    align-items: center;
+}
+.right-menu {
+    list-style-type: none;
+    padding-left: 0;
+    display: flex;
+    gap: 7px;
+    justify-content: flex-end;
+}
+.bg-transparent {
+    background-color: transparent;
+    border: 1px solid transparent !important;
+	color: #fff;
+}
+.bg-transparent:hover, .bg-transparent:focus {
+	color: #ddd;
+}
+  
 #main {transition: margin-left .5s}
-
-@media screen and (max-height: 450px) {
-	.sidenav {padding-top: 15px;}
-	.sidenav a {font-size: 18px;}
-}
 
 .rating-area {
 	overflow: hidden;
